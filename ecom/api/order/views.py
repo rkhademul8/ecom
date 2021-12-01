@@ -47,6 +47,6 @@ def add(request,id,token):
         ordr.save()
         return JsonResponse({'Success':True,'error':False,'msg':'Order create successfully'})
 
-class OrderiewSet(viewsets.ModelViewSet):
+class OrderViewSet(viewsets.ModelViewSet):
     queryset=Order.objects.all().order_by('id')
     serializer_class = OrderSerializer
